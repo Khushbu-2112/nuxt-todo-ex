@@ -1,7 +1,9 @@
 <template>
   <nuxt-link :to="'todos/'+id">
     <div class="todo">
-      <p>{{ title }}</p>
+      <p :class="{'lth':completed}">
+        {{ title }}
+      </p>
     </div>
   </nuxt-link>
 </template>
@@ -27,6 +29,9 @@ export default {
   .todo{
     padding: 1rem;
     margin: 1rem 0;
+  }
+  .lth{
+    text-decoration: line-through;
   }
   a{
     text-decoration: none;
